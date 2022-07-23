@@ -134,7 +134,8 @@ public class OregonTrail {
         }
     }
 
-    public static void displayStatus (Wagon wagon, int daysTravelled, int milesTravelled) throws Exception {
+    public static void
+    displayStatus (Wagon wagon, int daysTravelled, int milesTravelled) throws Exception {
         @SuppressWarnings("unchecked")
         Method shouldQuarantine = Wagon.class.getMethod("shouldQuarantine");
 
@@ -142,6 +143,11 @@ public class OregonTrail {
         System.out.println("Days travelled:"+ daysTravelled);
         System.out.println("Miles travelled:"+ milesTravelled);
         System.out.println("Quarantined?:" + ((boolean)shouldQuarantine.invoke(wagon)) );
+        if ((boolean)shouldQuarantine.invoke(wagon)){
+            System.out.println("Health Status: " + Health.CRITICAL);
+        } else {
+            System.out.println("Health Status: " + Health.HEALTHY);
+        }
         System.out.println("Remaining miles to Oregon:" + ((int)OregonTrail.getStaticFieldValue("TOTAL_MILES") - milesTravelled));
     }
 

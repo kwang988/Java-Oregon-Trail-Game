@@ -74,21 +74,15 @@ public class Wagon {
     public void loadWagon (int numTravelers, int numHunters, int numDoctors) {
             for (int i = 0; i < numTravelers; i++) {
                 Traveler traveler = new Traveler();
-                if (this.getAvailableSeatCount() > 0) {
-                    this.join(traveler);
-                }
+                this.join(traveler);
             }
             for (int i = 0; i < numHunters; i++) {
                 Hunter hunter = new Hunter();
-                if (this.getAvailableSeatCount() > 0) {
-                    this.join(hunter);
-                }
+                this.join(hunter);
             }
             for (int i = 0; i < numDoctors; i++) {
                 Doctor doctor = new Doctor();
-                if (this.getAvailableSeatCount() > 0) {
-                    this.join(doctor);
-                }
+                this.join(doctor);
             }
     }
 

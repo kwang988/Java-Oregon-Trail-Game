@@ -8,6 +8,8 @@ public class Main {
     /*** Declare Statics and Constants Here ***/
     static int daysTravelled;
     static int milesTravelled;
+    static Health healthStatus = Health.HEALTHY;
+
     static final int TOTAL_MILES = 1600; //total miles required to reach Oregon
     static final int MILES_PER_DAY = 20; //total miles travelled per day
     static final int FOOD_EXCHANGE = 2; //how much food traveler give each other each time
@@ -17,6 +19,7 @@ public class Main {
     static final int NUM_TRAVELERS = 2;
     static final int NUM_HUNTERS = 1;
     static final int NUM_DOCTORS = 1;
+
 
     /*** DO NOT CHANGE THE CODE BELOW THIS LINE ***/
     public static void main (String[] args) {
